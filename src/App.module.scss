@@ -1,0 +1,9 @@
+@use 'assets/styles/base';
+@import 'assets/styles/extends';
+
+.app_wrapper {
+  @extend %flex;
+  width: base.$app_width;
+  margin: 0 auto;
+  height: 100vh;
+}

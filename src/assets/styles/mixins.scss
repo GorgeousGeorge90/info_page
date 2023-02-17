@@ -1,0 +1,7 @@
+@import 'src/assets/styles/extends';
+
+
+@mixin flex_type($type) {
+  @extend flex;
+  flex-direction: $type;
+}
