@@ -1,0 +1,16 @@
+@use 'src/assets/styles/base';
+@use 'src/index';
+
+
+
+.btn {
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border:none;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+  }
+}

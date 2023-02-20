@@ -1,0 +1,44 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+
+.film_item {
+  display: grid;
+  grid-template-rows: 1fr 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+
+  .rating {
+    @extend %flex;
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+    border: 2px solid black;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 0.7em;
+    color: deeppink;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: map-get(base.$font_sizes, small);
+    color: var(--secondary-color);
+    border: solid 1px black;
+    border-radius: 10px;
+
+    img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}

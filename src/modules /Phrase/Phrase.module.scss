@@ -1,0 +1,11 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+
+.phrase {
+  @extend %flex;
+  flex-direction: column;
+  gap: 15px;
+  width: map-get(base.$app_width, block);
+  margin: 0 auto;
+}

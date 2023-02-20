@@ -1,16 +1,16 @@
 import './App.module.scss';
-import AuthForm from "./components/AuthForm/AuthForm";
 import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth, getLoading} from "./selectors/authSelectors";
-import Preloader from './components/common/Preloader/Preloader';
+import Preloader from './UI/Preloader/Preloader';
 import styles from './App.module.scss';
-import MainFilmsWrapper from "./components/MainFilmsWrapper/MainFilmsWrapper";
 import {useEffect} from "react";
-import {asyncCommentsActions} from "./store/commentsReducer/actions";
-import supabase from "./api/client";
-import {asyncMainActions} from "./store/mainReducer/actions";
-import {commentsApi} from "./api/api";
-import CommentInput from "./components/Comments/CommentInput/CommentInput";
+import {asyncCommentsActions} from "./modules /Comments/store/actions";
+import MainPage from "./pages/MainPage/MainPage";
+import StartPage from "./pages/StartPage/StartPage";
+import useInput from "./helpers/useInput/useInput";
+import useTheme from "./helpers/useTheme/useTheme";
+import ThemeSwitcher from "./UI/ThemeSwitcher/ThemeSwitcher";
+import Header from "./components/Header/Header";
 
 
 
@@ -25,16 +25,15 @@ function App() {
     },[])
 
 
-
     return (
-        <div className={styles.app_wrapper}>
-            {
-                isAuth ?  <MainFilmsWrapper/>: <AuthForm/>
-            }
+        <div className={styles.app}>
+            <Header isAuth={isAuth}/>
+            <StartPage/>
+            <MainPage/>
             {
                 loading ? <Preloader/>: null
             }
-            <CommentInput/>
+            {/*<CommentInput/>*/}
         </div>
     );
 }

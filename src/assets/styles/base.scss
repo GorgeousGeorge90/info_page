@@ -1,11 +1,29 @@
 @use 'sass:map';
 
-$app_width: 1100px;
-$container_width: 900px;
-
-$bg_colors: (
-    'light': #01b4e4,
-    'dark': #0d253f,
+$app_width: (
+        app: 1100px,
+        container: 900px,
+        block: 600px,
 );
 
-$text_color: #fff;
+$app_height: (
+        app: 100vh,
+        header: 120px,
+        content: calc(100vh - 120px),
+
+);
+
+
+$font_sizes: (
+        xxl: 2em,
+        large: 1.5em,
+        medium: 1.2em,
+        small: 0.8em,
+);
+
+$font_weights: (
+        normal:400,
+        medium: 500,
+        semi bold:600,
+        bold: 700,
+);

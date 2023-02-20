@@ -7,5 +7,5 @@ export const getSelect = state => state.main.selected
 
 export const getSeveralFilms = createSelector(
     getAllFilms, films=>
-        films.filter(film=> films.indexOf(film) < 12)
+        films.filter(film=> films.indexOf(film) < 8)
     )

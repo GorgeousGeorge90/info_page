@@ -1,0 +1,64 @@
+@use 'src/assets/styles/base';
+@use 'src/index';
+@import 'src/assets/styles/extends';
+
+
+.header {
+  @extend %flex;
+  width: map-get(base.$app_width, app);
+  height: map-get(base.$app_height, header);
+  margin: 0 auto;
+  background-color: var(--bg-color-header);
+
+  .container {
+    display: grid;
+    grid-template-rows: 1fr 30px;
+    grid-template-columns: 1fr 100px 100px;
+    grid-template-areas: 'title btn icon'
+                          'nav nav nav'
+    ;
+    text-align: center;
+    justify-content: center;
+    width: map-get(base.$app_width, container);
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      grid-area: title;
+
+      h3 {
+        font-size: map-get(base.$font_sizes, 'xxl');
+        font-weight: map-get(base.$font_weights, 'medium');
+        letter-spacing: 0.7em;
+        color: var(--primary-color);
+      }
+
+      p {
+        font-size: map-get(base.$font_sizes, 'small');
+        font-weight: map-get(base.$font_weights, 'bold');
+        color: var(--secondary-color);
+      }
+    }
+
+      .btn {
+        grid-area: btn;
+        align-self: center;
+      }
+
+      .nav {
+        display: flex;
+        justify-content:space-around;
+        color: var(--secondary-color);
+        grid-area: nav;
+        align-self: center;
+
+        span {
+          a {
+            text-decoration: none;
+            color: var(--secondary-color);
+          }
+        }
+      }
+  }
+}

@@ -1,0 +1,33 @@
+@use 'src/assets/styles/base';
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Orienta&family=Ultra&display=swap');
+
+
+:root [data-theme = 'light'] {
+  --bg-color-header: #01b4e4;
+  --bg-color-main: #b7dcfa;
+  --primary-color: orange;
+  --secondary-color: #fff;
+  --alter-color: #0d253f;
+}
+
+:root [data-theme = 'dark'] {
+  --bg-color-header:  #0d253f;
+  --bg-color-main:   #65a9f3;
+  --primary-color: orange;
+  --secondary-color: #fff;
+  --alter-color:#01b4e4;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orienta', sans-serif;
+}
+
+
+
+
+
+
