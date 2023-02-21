@@ -3,6 +3,7 @@ import { mainTypes } from './types';
 const inititalState = {
     films:[],
     selected:null,
+    isLoading:false,
 }
 
 const mainReducer = (state=inititalState, action)=> {
@@ -24,6 +25,12 @@ const mainReducer = (state=inititalState, action)=> {
 
                     return acc
                 })
+            }
+
+        case mainTypes.IS_LOADING:
+            return {
+                ...state,
+                isLoading: action.payload,
             }
 
         default:

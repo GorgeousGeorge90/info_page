@@ -4,6 +4,7 @@ import MainPage from "../pages/MainPage/MainPage";
 import ErrorElement from "./ErrorElement/ErrorElement";
 import StartPage from "../pages/StartPage/StartPage";
 import Header from "../components/Header/Header";
+import FilmCardPage from "../pages/FilmCardPage/FilmCardPage";
 
 
 export const router = createBrowserRouter([
@@ -18,6 +19,13 @@ export const router = createBrowserRouter([
         path: 'main',
         element: (<Header>
             <MainPage/>
+        </Header>),
+        error: <ErrorElement/>
+    },
+    {
+        path: 'film_card',
+        element: (<Header>
+            <FilmCardPage/>
         </Header>),
         error: <ErrorElement/>
     },

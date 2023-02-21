@@ -1,6 +1,7 @@
 export const mainTypes = {
     GET_FILMS:' GET FILMS',
     GET_SELECTED: 'GET SELECTED',
+    IS_LOADING: 'IS LOADING',
 }
 
 
