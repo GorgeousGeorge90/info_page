@@ -26,7 +26,7 @@ const Header = ({children}) => {
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.title}>
-                    <h3>KinoFan</h3>
+                    <h3>Movie Lab</h3>
                     <p>Welcome!</p>
                 </div>
                 <div className={styles.btn}>

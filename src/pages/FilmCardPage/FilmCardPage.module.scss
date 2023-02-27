@@ -1,0 +1,7 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+
+.container {
+  @extend %flex;
+}

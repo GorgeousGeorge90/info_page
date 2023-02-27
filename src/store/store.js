@@ -1,10 +1,11 @@
 import {applyMiddleware, combineReducers, legacy_createStore} from 'redux';
 import createSagaMiddleware from 'redux-saga'
-import authReducer from '../modules /AuthForm/store/authReducer';
 import mainReducer from '../modules /MainFilmsWrapper/store/mainReducer';
 import commentsReducer from '../modules /Comments/store/commentsReducer';
-import phraseReducer from '../modules /Phrase/store/phraseReducer';
 import { rootWatcher } from './sagas';
+import searchReducer from "../modules /SearchForm/store/searchReducer";
+import authReducer from "../modules /AuthForm/store/authReducer";
+import phraseReducer from "../modules /Phrase/store/phraseReducer";
 
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     phrase: phraseReducer,
     main: mainReducer,
     comments: commentsReducer,
+    search: searchReducer,
 })
 
 const saga = createSagaMiddleware()
