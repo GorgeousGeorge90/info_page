@@ -1,0 +1,32 @@
+@use 'src/index';
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+
+.search {
+  display: flex;
+
+  input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-family: map-get(base.$font_families, other);
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+    background-color: var(--alter-color);
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-family: map-get(base.$font_families, other);
+    cursor: pointer;
+
+    .icon * {
+      fill: #fff;
+    }
+  }
+}

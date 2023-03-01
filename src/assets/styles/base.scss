@@ -18,12 +18,19 @@ $font_sizes: (
         xxl: 2em,
         large: 1.5em,
         medium: 1.2em,
+        medium_s: 1.05em,
         small: 0.8em,
 );
 
 $font_weights: (
         normal:400,
         medium: 500,
-        semi bold:600,
+        semi_bold:600,
         bold: 700,
 );
+
+$font_families: (
+        classic: 'Orienta',
+        header:'Gajraj One',
+        other:'Shantell Sans',
+)

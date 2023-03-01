@@ -1,7 +1,8 @@
 import styles from './Header.module.scss';
 import ThemeSwitcher from "../../UI/ThemeSwitcher/ThemeSwitcher";
 import { NavLink } from 'react-router-dom';
-import user from './../../assets/img/user.png';
+import off from './../../assets/img/off.png';
+import logIn from './../../assets/img/logIn.png';
 import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth} from "../../selectors/authSelectors";
 import {useEffect} from "react";
@@ -33,18 +34,18 @@ const Header = ({children}) => {
                     <ThemeSwitcher/>
                 </div>
                 <div className={styles.icon}>
-                    <img src={user} alt='user'/>
-                    <div style={{color: 'white'}}>
+                    <img src={ isAuth ? logIn:off} alt='user'/>
+                    <div>
                         {
-                            isAuth ? <BaseButton name={'Free'}
+                            isAuth ? <BaseButton text={'Exit'}
                                                  onClick={onClick}
-                            />: 'Off'
+                            />: 'Offline'
                         }
                     </div>
                 </div>
                 <nav className={styles.nav}>
-                    <span><NavLink onClick={handleClick} to={'/main'}>Films</NavLink></span>
-                    <span><NavLink to={'/film_card'}>FilmCard</NavLink></span>
+                    <NavLink onClick={handleClick} to={'/main'}>Films</NavLink>
+                    <NavLink to={'/film_card'}>FilmCard</NavLink>
                 </nav>
             </div>
         </header>

@@ -2,10 +2,10 @@ import {useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import {getIsAuth} from '../../selectors/authSelectors';
 import {useEffect} from 'react';
-import SearchForm from "../../modules /SearchForm/SearchForm";
+import SearchForm from "../../modules /NewFilmsList/components/SearchForm/SearchForm";
 import styles from './FilmCardPage.module.scss';
-import {searchApi} from "../../modules /SearchForm/api/api";
 import NewFilmsList from "../../modules /NewFilmsList/NewFilmsList";
+import BasePreloader from "../../UI/BasePreloader/BasePreloader";
 
 
 const FilmCardPage = () => {
@@ -19,7 +19,6 @@ const FilmCardPage = () => {
 
 
     return (<div className={styles.container}>
-            <SearchForm/>
             <NewFilmsList/>
         </div>)
 }

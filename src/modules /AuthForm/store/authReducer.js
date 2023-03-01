@@ -8,6 +8,7 @@ const initialState = {
     },
     isAuth:false,
     loading:false,
+    error:false,
 }
 
 const authReducer = (state=initialState, action)=> {
@@ -29,6 +30,12 @@ const authReducer = (state=initialState, action)=> {
             return {
                 ...state,
                 loading: action.payload,
+            }
+
+        case authTypes.GET_ERROR:
+            return {
+                ...state,
+                error: action.payload,
             }
 
 

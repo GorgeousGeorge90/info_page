@@ -8,4 +8,26 @@
   gap: 15px;
   width: map-get(base.$app_width, block);
   margin: 0 auto;
+  color: white;
+  animation: show-it 5s ease-in-out;
+
+  h3 {
+    font-family: map-get(base.$font_families, other);
+    font-size: map-get(base.$font_sizes, medium);
+  }
+
+  p {
+    font-size: map-get(base.$font_sizes, medium_s);
+    font-family: cursive;
+    text-align: right;
+  }
+}
+
+@keyframes show-it {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

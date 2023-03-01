@@ -1,5 +1,20 @@
-
+@use 'src/assets/styles/base';
 
 .btn {
+  transition:all 1.5s ease-in-out;
 
+  button {
+    display: none;
+  }
+
+  label {
+     cursor: pointer;
+     font-family: map-get(base.$font_families, other);
+     font-size: map-get(base.$font_sizes, medium) ;
+  }
+
+}
+
+.btn:hover {
+  transform: scale(1.4);
 }

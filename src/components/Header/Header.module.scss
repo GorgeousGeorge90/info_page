@@ -13,9 +13,9 @@
   .container {
     display: grid;
     grid-template-rows: 1fr 30px;
-    grid-template-columns: 1fr 100px 100px;
-    grid-template-areas: 'title btn icon'
-                          'nav nav nav'
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-areas: 'gap title icon'
+                          'gap nav btn'
     ;
     text-align: center;
     justify-content: center;
@@ -24,20 +24,40 @@
     .title {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 2px;
       grid-area: title;
+
 
       h3 {
         font-size: map-get(base.$font_sizes, 'xxl');
         font-weight: map-get(base.$font_weights, 'medium');
         letter-spacing: 0.5em;
         color: var(--primary-color);
+        font-family: map-get(base.$font_families, header);
       }
 
       p {
-        font-size: map-get(base.$font_sizes, 'small');
+        font-size: map-get(base.$font_sizes, 'medium');
         font-weight: map-get(base.$font_weights, 'bold');
         color: var(--secondary-color);
+        font-family: map-get(base.$font_families, other);
+      }
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      grid-area: icon;
+
+      img {
+        height: 60px;
+        width: 60px;
+      }
+
+      img + div {
+        color: #fff;
+        font-family: map-get(base.$font_families, other);
+        font-size: map-get(base.$font_sizes, small);
       }
     }
 
@@ -53,12 +73,17 @@
         grid-area: nav;
         align-self: center;
 
-        span {
           a {
             text-decoration: none;
             color: var(--secondary-color);
+            font-family: map-get(base.$font_families, other);
+            transition: 1s transform;
+            }
+
+          :hover {
+            color: purple;
+            transform: scale(1.2);
           }
-        }
       }
   }
 }

@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import {getIsAuth, getProfile} from '../../selectors/authSelectors';
-import {asyncAuthActions} from "./store/actions";
+import {asyncAuthActions, authActions} from "./store/actions";
 import styles from './AuthFrom.module.scss';
-import {useEffect} from 'react';
+
 
 
 
@@ -23,7 +23,7 @@ const AuthForm = () => {
             dispatch(asyncAuthActions.asyncLogIn())
             reset()
         } else {
-            console.log('Wrong!')
+            dispatch(authActions.getError(true))
             reset()
         }
     }
@@ -32,18 +32,18 @@ const AuthForm = () => {
                   className={styles.form}
         >
         <input type='text'
-               placeholder='login'
+               placeholder='Login'
                {...register('login')}
         />
         <input type="text"
-               placeholder='password'
+               placeholder='Password'
                {...register('password')}
         />
-        <button>
-            {
-                isAuth ? 'logout' : 'login'
-            }
-        </button>
+        <button>Enter</button>
+        <span data-description={
+           `Login: Egor 
+            Password: 1 2 3 4 5`
+        }>?</span>
     </form>)
 }
 

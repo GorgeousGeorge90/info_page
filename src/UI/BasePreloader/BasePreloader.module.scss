@@ -1,0 +1,46 @@
+@use 'src/assets/styles/base';
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ring {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border:2px dashed #fff;
+    animation: spin-move 5s linear infinite;
+  }
+
+  .text {
+    position: absolute;
+    font-family: map-get(base.$font_families, other);
+    font-size: map-get(base.$font_sizes, small);
+    text-transform: uppercase;
+    animation: show 3s infinite ease-in-out;
+  }
+}
+
+@keyframes spin-move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

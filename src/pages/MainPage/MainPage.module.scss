@@ -4,10 +4,10 @@
 
 
 .container {
+  @extend %background;
   display: flex;
   justify-content: center;
   width: map-get(base.$app_width, app);
   height: map-get(base.$app_height, content);
   margin: 0 auto;
-  background-color: var(--bg-color-main);
 }

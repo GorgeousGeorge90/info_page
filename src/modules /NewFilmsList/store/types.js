@@ -3,6 +3,7 @@ export const asyncSearchType = {
 }
 
 export const searchTypes = {
+    SELECT_CARD: 'SELECT CARD',
     GET_CARD: 'GET CARD',
     IS_FETCHING: 'IS_FETCHING',
 }

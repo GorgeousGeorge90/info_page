@@ -3,7 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import mainReducer from '../modules /MainFilmsWrapper/store/mainReducer';
 import commentsReducer from '../modules /Comments/store/commentsReducer';
 import { rootWatcher } from './sagas';
-import searchReducer from "../modules /SearchForm/store/searchReducer";
+import searchReducer from "../modules /NewFilmsList/store/searchReducer";
 import authReducer from "../modules /AuthForm/store/authReducer";
 import phraseReducer from "../modules /Phrase/store/phraseReducer";
 

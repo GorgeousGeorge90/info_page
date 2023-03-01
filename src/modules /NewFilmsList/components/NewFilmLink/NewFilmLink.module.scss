@@ -1,0 +1,17 @@
+@use 'src/assets/styles/base';
+
+
+.link {
+  color: #fff;
+  font-family: map-get(base.$font_families, other);
+  cursor: pointer;
+
+  span {
+    transition: 3s transform;
+  }
+}
+
+li + span:hover {
+  //color: red;
+  transform: scale(1.2);
+}

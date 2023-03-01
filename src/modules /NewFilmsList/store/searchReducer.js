@@ -3,6 +3,7 @@ import { searchTypes } from './types';
 const initialState = {
     cards: null,
     isFetching: false,
+    selected: null,
 }
 
 const searchReducer = (state = initialState , action) => {
@@ -20,6 +21,11 @@ const searchReducer = (state = initialState , action) => {
                 isFetching: action.payload,
             }
 
+        case searchTypes.SELECT_CARD:
+            return {
+                ...state,
+                selected: action.payload,
+            }
 
         default:
             return state

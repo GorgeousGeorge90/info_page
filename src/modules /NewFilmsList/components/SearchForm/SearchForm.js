@@ -1,6 +1,9 @@
-import useInput from '../../helpers/useInput/useInput';
+import useInput from '../../../../helpers/useInput/useInput';
 import {useDispatch} from "react-redux";
-import {asyncSearchActions} from './store/actions';
+import {asyncSearchActions} from '../../store/actions';
+import styles from './SearchForm.module.scss';
+import {ReactComponent as Search} from './../../../../assets/img/search.svg'
+
 
 
 
@@ -11,23 +14,19 @@ const SearchForm = () => {
     const {value,onChange,reset} = useInput('')
 
     const handleClick = () => {
+        console.log(value)
         dispatch(asyncSearchActions.getNewCard(value))
         reset()
     }
 
-    // const onClick = async (name) => {
-    //     const response = await searchApi.getNewFilm(name)
-    //     console.log(response)
-    // }
-
-    return <>
+    return <div className={styles.search}>
         <input type="text"
                placeholder='Enter new film'
                value={value}
                onChange={onChange}
         />
-        <button onClick={handleClick}>Find</button>
-    </>
+        <button onClick={handleClick}><Search className={styles.icon}/></button>
+    </div>
 }
 
 export default SearchForm

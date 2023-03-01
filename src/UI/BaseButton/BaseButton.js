@@ -2,10 +2,11 @@ import styles from './BaseButton.module.scss';
 
 
 
-const BaseButton = ({name,onClick}) => {
+const BaseButton = ({onClick, text}) => {
 
     return (<div className={styles.btn}>
-            <button onClick={onClick}>{name}</button>
+            <button id={'btn'} onClick={onClick}/>
+            <label htmlFor="btn">{text}</label>
         </div>)
 }
 
