@@ -11,7 +11,6 @@ const FilmsList = ({films}) => {
                                         name={film.name}
                                         pic={film.poster_path}
                                         rating={film.vote_average}
-                                        date={film.first_air_date}
             />)
         }
     </ul>)

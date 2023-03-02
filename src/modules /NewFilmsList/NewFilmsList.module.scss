@@ -3,15 +3,29 @@
 
 
 .container {
-  @extend %flex;
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  width: map-get(base.$app_width, container);
   gap: 50px;
+  margin: 0 auto;
+
 
   .list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     list-style: none;
+    animation: get-it 200ms ease-in-out;
+  }
+}
+
+@keyframes get-it {
+  0% {
+    padding-right: 1000px;
+  }
+  100%{
+    padding: 0;
   }
 }
 

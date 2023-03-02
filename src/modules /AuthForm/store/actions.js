@@ -8,6 +8,6 @@ export const authActions = {
 }
 
 export const asyncAuthActions = {
-    asyncLogIn:() => ({type: asyncAuthTypes.ASYNC_LOG_IN}),
+    asyncLogIn:payload => ({type: asyncAuthTypes.ASYNC_LOG_IN, payload}),
     asyncLogOut:() => ({type: asyncAuthTypes.ASYNC_LOG_OUT}),
 }

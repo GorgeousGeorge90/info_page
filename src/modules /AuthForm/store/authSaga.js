@@ -1,23 +1,28 @@
 import { takeEvery, put } from 'redux-saga/effects';
 import {asyncAuthTypes } from './types';
 import {authActions} from "./actions";
+import checkFn from '../helpers/checkFn/checkFn';
 
 
 
 const delay = ms => new Promise(resolve => setTimeout(resolve,ms))
 
-function* logInWorker() {
+function* logInWorker(action) {
     yield put(authActions.loading(true))
-    yield delay(3000)
-    yield put(authActions.logIn())
+    const result = yield checkFn(action.payload)
+    if (result) {
+        yield delay(2000)
+        yield put(authActions.logIn())
+    } else {
+        yield delay(2000)
+        yield put(authActions.getError(true))
+    }
     yield put(authActions.loading(false))
 }
 
 function* logOutWorker() {
-    yield put(authActions.loading(true))
-    yield delay(3000)
+    yield delay(2000)
     yield put(authActions.logOut())
-    yield put(authActions.loading(false))
 }
 
 export function* authWatcher() {

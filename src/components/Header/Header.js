@@ -7,7 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth} from "../../selectors/authSelectors";
 import {useEffect} from "react";
 import BaseButton from "../../UI/BaseButton/BaseButton";
-import {authActions} from "../../modules /AuthForm/store/actions";
+import {asyncAuthActions} from "../../modules /AuthForm/store/actions";
 
 
 
@@ -21,7 +21,7 @@ const Header = ({children}) => {
         return !isAuth ? e.preventDefault(): null
     }
 
-    const onClick = () => dispatch(authActions.logOut())
+    const onClick = () => dispatch(asyncAuthActions.asyncLogOut())
 
     return (<>
         <header className={styles.header}>

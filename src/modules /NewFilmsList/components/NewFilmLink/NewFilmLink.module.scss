@@ -1,17 +1,34 @@
 @use 'src/assets/styles/base';
+@use 'src/index';
+@import 'src/assets/styles/extends';
 
 
 .link {
-  color: #fff;
-  font-family: map-get(base.$font_families, other);
-  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  font-size: 1.1em;
 
-  span {
-    transition: 3s transform;
+  .title {
+    font-family: map-get(base.$font_families, classic);
+    cursor: pointer;
+    color: #fff;
+    transition: 1s all;
+  }
+
+  .rating {
+    display: flex;
+    gap: 5px;
+    color: goldenrod;
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    font-size: map-get(base.$font_sizes, small);
   }
 }
 
-li + span:hover {
-  //color: red;
+.link:hover {
+  color: purple;
   transform: scale(1.2);
 }

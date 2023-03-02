@@ -1,14 +1,14 @@
 @use 'src/assets/styles/base';
+@use 'src/index';
 @import 'src/assets/styles/extends';
 
 
 .film_item {
-  display: grid;
-  grid-template-rows: 1fr 20px;
-  align-items: center;
-  justify-content: center;
+  @extend %flex;
   flex-direction: column;
+  grid-template-rows: 1fr 20px;;
   position: relative;
+  padding: 0;
 
 
   .rating {
@@ -27,17 +27,19 @@
   }
 
   .card {
-    display: flex;
+    @extend %flex;
     flex-direction: column;
-    align-items: center;
     font-size: map-get(base.$font_sizes, small);
+    background-color: var(--bg-color-header);
     color: var(--secondary-color);
-    border: solid 1px black;
+    border: none;
+    padding-bottom: 10px;
     border-radius: 10px;
+    justify-content: center;
 
     img {
       width: 150px;
-      height: auto;
+      height: 30vh;
       border-radius: 10px 10px 0 0;
     }
   }

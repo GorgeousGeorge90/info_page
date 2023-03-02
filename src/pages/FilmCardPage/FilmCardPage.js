@@ -2,10 +2,9 @@ import {useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import {getIsAuth} from '../../selectors/authSelectors';
 import {useEffect} from 'react';
-import SearchForm from "../../modules /NewFilmsList/components/SearchForm/SearchForm";
 import styles from './FilmCardPage.module.scss';
 import NewFilmsList from "../../modules /NewFilmsList/NewFilmsList";
-import BasePreloader from "../../UI/BasePreloader/BasePreloader";
+
 
 
 const FilmCardPage = () => {
