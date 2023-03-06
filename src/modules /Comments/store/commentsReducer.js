@@ -1,9 +1,11 @@
 import { commentsTypes } from './types';
-import nanoid from 'nanoid';
+
 
 
 const initialState = {
-    comments:[]
+    comments:[],
+    isProcess: false,
+    editMode:false,
 }
 
 
@@ -23,13 +25,14 @@ const commentsReducer = (state=initialState,action) => {
             }
 
         case commentsTypes.UPDATE_COMMENT:
+            const {id,text} = action.payload
             return {
                 ...state,
                 comments: state.comments.map(comment => {
-                    if (comment.id === action.payload.id) {
+                    if (comment.id === id) {
                         return {
                             ...comment,
-                            title: action.payload.title
+                            title: text,
                         }
                     }
 
@@ -41,6 +44,12 @@ const commentsReducer = (state=initialState,action) => {
             return {
                 ...state,
                 comments: state.comments.filter(comment=> comment.id !== action.payload)
+            }
+
+        case commentsTypes.EDIT_MODE:
+            return {
+                ...state,
+                editMode: action.payload,
             }
 
         default:

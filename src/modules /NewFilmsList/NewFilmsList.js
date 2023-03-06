@@ -13,7 +13,9 @@ const NewFilmsList = () => {
     const data_column = dataCreater(films)
 
     return (<div className={styles.container}>
-            <SearchForm/>
+            <div className={styles.form}>
+                <SearchForm/>
+            </div>
             {
                 isFetching ? <BasePreloader text={'Loading...'}/> :
                 !data_column ? 'No request' :

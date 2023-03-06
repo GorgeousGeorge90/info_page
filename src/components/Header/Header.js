@@ -46,6 +46,7 @@ const Header = ({children}) => {
                 <nav className={styles.nav}>
                     <NavLink onClick={handleClick} to={'/main'}>Films</NavLink>
                     <NavLink to={'/film_card'}>FilmCard</NavLink>
+                    <NavLink to={'/users_advice'}>UsersAdvice</NavLink>
                 </nav>
             </div>
         </header>

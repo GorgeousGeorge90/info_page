@@ -1,0 +1,36 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+@import 'src/assets/styles/mixins';
+
+
+
+.container {
+  @extend %flex;
+  @include position_type(fixed);
+  width: map-get(base.$app_width, app);
+  margin: 0 auto;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 36px;
+  animation: show-it 1s ease-in-out;
+
+  :nth-child(2) {
+    z-index: 1;
+  }
+}
+
+.overlay {
+  @include position_type(absolute);
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+
+@keyframes show-it {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

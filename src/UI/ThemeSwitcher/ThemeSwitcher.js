@@ -1,4 +1,4 @@
-import useTheme from "../../helpers/useTheme/useTheme";
+import useTheme from "../../utils&helpers/useTheme/useTheme";
 import {ReactComponent as SunIcon} from './../../assets/img/icon-sun.svg';
 import {ReactComponent as MoonIcon} from './../../assets/img/icon-moon.svg';
 import styles from './ThemeSwitcher.module.scss';

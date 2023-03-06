@@ -1,4 +1,4 @@
-import useInput from '../../../../helpers/useInput/useInput';
+import useInput from '../../../../utils&helpers/useInput/useInput';
 import {useDispatch} from "react-redux";
 import {asyncSearchActions} from '../../store/actions';
 import styles from './SearchForm.module.scss';

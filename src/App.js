@@ -7,8 +7,8 @@ import {useEffect} from "react";
 import {asyncCommentsActions} from "./modules /Comments/store/actions";
 import MainPage from "./pages/MainPage/MainPage";
 import StartPage from "./pages/StartPage/StartPage";
-import useInput from "./helpers/useInput/useInput";
-import useTheme from "./helpers/useTheme/useTheme";
+import useInput from "./utils&helpers/useInput/useInput";
+import useTheme from "./utils&helpers/useTheme/useTheme";
 import ThemeSwitcher from "./UI/ThemeSwitcher/ThemeSwitcher";
 import Header from "./components/Header/Header";
 

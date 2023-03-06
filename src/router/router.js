@@ -5,6 +5,7 @@ import ErrorElement from "./ErrorElement/ErrorElement";
 import StartPage from "../pages/StartPage/StartPage";
 import Header from "../components/Header/Header";
 import FilmCardPage from "../pages/FilmCardPage/FilmCardPage";
+import UsersAdvicePage from "../pages/UsersAdvicePage/UsersAdvicePage";
 
 
 export const router = createBrowserRouter([
@@ -29,6 +30,14 @@ export const router = createBrowserRouter([
         </Header>),
         error: <ErrorElement/>
     },
+    {
+        path: 'users_advice',
+        element: (<Header>
+            <UsersAdvicePage/>
+        </Header>),
+        error: <ErrorElement/>
+
+    }
 ])
 
 

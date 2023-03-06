@@ -1,6 +1,6 @@
 import {useForm} from 'react-hook-form';
 import {useDispatch} from "react-redux";
-import {asyncCommentsActions, commentsActions} from "../../store/actions";
+import {asyncCommentsActions} from "../../store/actions";
 import styles from './CommentInput.module.scss';
 
 
@@ -15,6 +15,7 @@ const CommentInput = () => {
 
     const handleClick = data => {
         const payload = {
+            id: Date.now(),
             name: data.name,
             title: data.title,
         }
@@ -26,13 +27,13 @@ const CommentInput = () => {
                   className={styles.form}
     >
         <input type="text"
-               placeholder='name'
+               placeholder='Name'
                {...register('name')}
         />
-        <textarea placeholder='Title'
+        <textarea placeholder='Typing...'
                   {...register('title')}
         />
-        <button>Create comment</button>
+        <button>Comment</button>
     </form>)
 }
 

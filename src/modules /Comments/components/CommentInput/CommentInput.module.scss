@@ -1,7 +1,39 @@
+@use 'src/assets/styles/base';
 @import '../../../../assets/styles/extends';
 
 .form {
-  @extend %flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 30px 100px;
+  grid-template-columns: 1fr 50px 1fr;
+  grid-template-areas: 'input gap btn'
+                        'textarea textarea textarea';
+  gap: 10px;
+
+  input, textarea, button {
+    border-radius: 5px;
+    border: none;
+    font-family: map-get(base.$font_families, other);
+  }
+
+  input {
+    grid-area: input;
+    padding: 5px;
+    align-self: start;
+
+  }
+
+  textarea {
+    grid-area: textarea;
+    padding: 2px;
+    width: 400px;
+    height: 100px;
+    resize: none;
+  }
+
+  button {
+    grid-area: btn;
+    color: #fff;
+    background-color: var(--bg-color-header);
+  }
 }
 

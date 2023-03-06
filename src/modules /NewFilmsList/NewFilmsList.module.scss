@@ -3,29 +3,26 @@
 
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-rows: 100px 1fr;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: map-get(base.$app_width, container);
   gap: 50px;
   margin: 0 auto;
 
+  .form {
+    justify-self: center;
+  }
+
 
   .list {
+    align-self: center;
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     list-style: none;
-    animation: get-it 200ms ease-in-out;
   }
 }
-
-@keyframes get-it {
-  0% {
-    padding-right: 1000px;
-  }
-  100%{
-    padding: 0;
-  }
-}
-

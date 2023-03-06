@@ -1,0 +1,17 @@
+@import "src/assets/styles/extends";
+
+
+
+.container {
+  @extend %flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 50px;
+
+  ul {
+    @extend %flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+  }
+}

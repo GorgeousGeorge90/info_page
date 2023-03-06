@@ -3,6 +3,8 @@ export const commentsTypes = {
     ADD_COMMENT: 'ADD COMMENT',
     DELETE_COMMENT: 'DELETE COMMENT',
     UPDATE_COMMENT: 'UPDATE COMMENT',
+    IS_PROCESS: 'IS_PROCESS',
+    EDIT_MODE: 'EDIT MODE',
 }
 
 export const asyncCommentsTypes = {

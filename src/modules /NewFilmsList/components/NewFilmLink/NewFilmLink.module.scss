@@ -6,7 +6,7 @@
 .link {
   display: flex;
   gap: 10px;
-  font-size: 1.1em;
+  font-size: 0.9em;
 
   .title {
     font-family: map-get(base.$font_families, classic);
@@ -28,7 +28,9 @@
   }
 }
 
-.link:hover {
-  color: purple;
+.title:hover {
+  color: darkorange;
   transform: scale(1.2);
 }
+
+

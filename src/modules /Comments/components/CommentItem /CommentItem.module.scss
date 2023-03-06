@@ -1,0 +1,47 @@
+@use 'src/assets/styles/base';
+
+.comment {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 20px;
+  grid-template-rows: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  max-width: 400px;
+  animation: create 1s ease-in-out;
+
+  .name, .title {
+    font-family: map-get(base.$font_families, other);
+  }
+
+  .name {
+
+  }
+
+  .title {
+    :first-letter {
+      font-family: map-get(base.$font_families, header);
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    transform: scale(0.2);
+    justify-self: center;
+  }
+
+}
+
+
+@keyframes create {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
